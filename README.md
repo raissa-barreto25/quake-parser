@@ -1,10 +1,10 @@
-Quake Log Parser API
+# Quake Log Parser API
 
 Este projeto foi desenvolvido com o objetivo de analisar o arquivo games.log do Quake e disponibilizar as informações das partidas por meio de uma API simples utilizando Flask.
 
 A aplicação lê o arquivo de log, processa os dados e permite consultar as estatísticas de cada jogo através de rotas HTTP. Além disso, existe um arquivo menu.py que permite visualizar os resultados diretamente pelo terminal.
 
-Objetivo do Projeto
+### Objetivo do Projeto
 
 O sistema identifica as partidas presentes no arquivo de log e calcula:
 
@@ -17,7 +17,7 @@ O sistema identifica as partidas presentes no arquivo de log e calcula:
  - Ranking geral consolidado.
 
 
-Como a Solução Funciona:
+### Como a Solução Funciona:
 
 1 - O arquivo games.log é lido linha por linha.
 
