@@ -10,7 +10,7 @@ O sistema identifica as partidas presentes no arquivo de log e calcula:
 
  - Total de mortes por partida;
 
- - Lista de jogadores;
+ - Lista de jogadas e jogadores;
 
  - Número de mortes por jogador;
 
@@ -41,8 +41,8 @@ Como a Solução Funciona:
 
 A separação entre processamento do log, geração de ranking e camada HTTP foi feita para deixar o código mais organizado e facilitar futuras melhorias.
 
-Estrutura do Projeto
-    .
+Estrutura do Projeto:
+
     ├── api.py
     ├── analisador.py
     ├── ranking.py
@@ -59,33 +59,40 @@ Estrutura do Projeto
  - menu.py → Interface simples via terminal para exibir os resultados do analisador e do ranking
 
 Setup
-1. Clonar o repositório
+1. Clonar o repositório:
+
     git clone <url-do-repositorio>
     cd <nome-do-projeto>
     
-2. (Opcional) Criar ambiente virtual
+2. (Opcional) Criar ambiente virtual:
+
     python -m venv venv
 
 Ativar:
 
  - Windows:
+ 
     venv\Scripts\activate
 
  - Linux/Mac:
+ 
     source venv/bin/activate
    
-3. Instalar dependências
+3. Instalar dependências:
+
     pip install flask
 
 4. Executando o Projeto
- - Rodar a API
+ - Rodar a API:
+ 
     python api.py
 
  - A aplicação ficará disponível em:
 
     http://127.0.0.1:5000
    
- - Rodar o Menu no Terminal
+ - Rodar o Menu no Terminal:
+ 
     python menu.py
 
 O menu exibirá no console os dados processados pelo analisador e o ranking geral.
