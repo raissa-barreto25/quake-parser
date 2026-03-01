@@ -16,7 +16,5 @@ for i, jogo in enumerate(parser.jogos):
 
 ranking = gerar_ranking(parser.jogos)
 print("RANKING GERAL")
-for jogador, mortes in ranking.items():
-    print(f"{jogador} - {mortes} mortes")
-
-    
+for posicao, (jogador, mortes) in enumerate(ranking.items(), start=1):
+    print(f"{posicao}º lugar: {jogador} com {mortes} mortes")
