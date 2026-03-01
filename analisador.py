@@ -58,14 +58,3 @@ class GamesLog:
                                               'mortes' : jogo.mortes}
 
         return resultados
-    
-parser = GamesLog('games.log')
-parser.analisador()
-
-resultado = parser.get_resultado()
-for nome_jogo, dados in resultado.items():
-    print(nome_jogo)
-    print('total_mortes:', dados['total_mortes'])
-    print('jogadores:', dados['jogadores'])
-    print('mortes:', dados['mortes'])
-    print()
