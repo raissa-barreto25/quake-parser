@@ -1,4 +1,4 @@
-class Jogador:
+class Jogo:
     def __init__(self):
         self.total_mortes = 0
         self.jogadores = []
@@ -21,7 +21,7 @@ class Jogador:
             if killer not in self.jogadores:
                 self.add_jogador(killer)
                 
-            self.mortes[victim] += 1
+            self.mortes[killer] += 1
 
 class GamesLog:
     def __init__(self, caminho_arquivo):
@@ -34,7 +34,7 @@ class GamesLog:
         with open(self.caminho_arquivo, 'r') as arquivo:
             for linha in arquivo:
                 if 'InitGame' in linha:
-                    current_game = Jogador()
+                    current_game = Jogo()
                     self.jogos.append(current_game)
 
                 elif 'Kill:' in linha:
@@ -53,7 +53,7 @@ class GamesLog:
         resultados = {}
 
         for i, jogo in enumerate(self.jogos):
-            resultados[f'jogador_{i + 1}'] = {'total_mortes' : jogo.total_mortes, 
+            resultados[f'Game_{i + 1}'] = {'total_mortes' : jogo.total_mortes, 
                                               'jogadores' : jogo.jogadores,
                                               'mortes' : jogo.mortes}
 
